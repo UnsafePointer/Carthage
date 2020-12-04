@@ -98,6 +98,7 @@ public func cloneRepository(_ cloneURL: GitURL, _ destinationURL: URL, isBare: B
 	precondition(destinationURL.isFileURL)
 
 	var arguments = [ "clone" ]
+	arguments.append("--depth 1")
 	if isBare {
 		arguments.append("--bare")
 	}
